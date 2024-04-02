@@ -1,0 +1,112 @@
+/* media.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #a89292;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #4b3f3f;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background-color: #a89292;
+}
+
+.hero, .about, .contact {
+  padding: 100px 0;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  color:#a89292 ;
+}
+
+.hero h2, .about h2, .contact h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero p, .about p, .contact p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.services {
+  padding: 100px 0;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  color: #000; /* Change text color to black */
+  background-image: url('black.jpg'); /* Add background image */
+}
+
+.services h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.services p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto 40px;
+  background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.service img {
+  width: 50%;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.service-text {
+  width: 50%;
+}
+
+.service h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  text-align: justify; /* Align text to justify */
+}
