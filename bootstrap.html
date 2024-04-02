@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Responsive Webpage</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Navbar Background</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .custom-navbar {
+        background-image: url('banner.jpg'); 
+        background-size: cover;
+        background-position: center;
+      }
+      .custom-navbar .navbar-brand {
+        color: rgb(0, 0, 0); 
+      }
+      .custom-navbar .nav-link {
+        color: rgb(0, 0, 0); 
+      }
+    </style>
+  </head>
+  <body>
+  
+  <nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i>Toronto´s Annual Concert</i></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About.html">Tickets</a>
+          </li>
+          <li class="nav-item">
+            <a class= "nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  </body>
+  </html>
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concert</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url("color.jpg");
+      background-color: #0e0c0c;
+    }
+
+    .hero-section {
+      text-align: center;
+    }
+
+    .hero-section p {
+      color: rgb(182, 160, 0);
+      font-size: 36px; 
+      margin-top: 40px; 
+    }
+
+    .buy-tickets {
+      font-size: 36px;
+      text-transform: uppercase;
+      animation: colorChange 1s infinite alternate; 
+    }
+
+    @keyframes colorChange {
+      0% {
+        color: rgb(243, 0, 0); /* Start with black */
+      }
+      100% {
+        color: blue; /* End with blue */
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section class="hero-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="buy-tickets">!! BUY TICKETS !!</h1> <!-- Added BUY TICKETS text here -->
+        <p><i>Welcome to Toronto´s Annual Concert</i></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+
+<section class="services-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><i>Baby Gang</i></h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><i>Travis Scott</i></h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><i>Drake</i></h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="baby.jpg" class="card-img-top" alt="Portfolio Image 1">
+          <div class="card-body">
+            <h5 class="card-title">Highlights</h5>
+            <p class="card-text">
+              Get ready for an electrifying experience at Baby Gang's upcoming concert. Known for their energetic performances and infectious beats, Baby Gang is set to bring the house down with their explosive stage presence and chart-topping hits.
+              
+              During the concert, fans can anticipate a non-stop party atmosphere as Baby Gang delivers high-energy renditions of their most popular songs, igniting the crowd with their dynamic performances and catchy melodies. From crowd favorites to unreleased tracks, Baby Gang promises to keep the audience on their feet and dancing all night long.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="Travis.jpg" class="card-img-top" alt="Portfolio Image 2">
+          <div class="card-body">
+            <h5 class="card-title">Highlights</h5>
+            <p class="card-text">
+              At his upcoming concert, Travis Scott promises an immersive and adrenaline-fueled experience like no other. Combining explosive energy with innovative stage design, Travis will transport concert-goers into his world of ASTROWORLD, an otherworldly realm inspired by his album of the same name.
+              
+              During the concert, fans can expect high-octane performances of Travis's biggest hits, including "SICKO MODE" and "Goosebumps," as well as surprises and special guest appearances.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="Drake.jpg" class="card-img-top" alt="Portfolio Image 3">
+          <div class="card-body">
+            <h5 class="card-title">Highlights</h5>
+            <p class="card-text">
+              Prepare for an unforgettable night at Drake's highly-anticipated concert. As one of the biggest names in the music industry, Drake is renowned for his magnetic stage presence and chart-topping hits that resonate with fans worldwide.
+              
+              During the concert, fans can expect an electrifying showcase of Drake's extensive discography, featuring iconic tracks like "Hotline Bling," "In My Feelings," and "God's Plan." With his smooth delivery and undeniable charisma, Drake will captivate the audience, delivering a memorable performance that transcends genres and generations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p style="color: rgb(255, 255, 255);">&copy; 2024 Rabii´s Page. All rights reserved.</p>
+
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

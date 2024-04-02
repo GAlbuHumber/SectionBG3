@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Purchase</title>
+    <style>
+    .banner {
+      background-color:  rgb(255, 254, 251);
+      text-align: right;
+      padding: 10px 0;
+      background-image: url("banner.jpg");
+    }
+
+    .banner-button {
+      color:  #000000;
+      padding: 10px 20px;
+      text-decoration: none;
+      margin: 0 10px;
+      border-radius: 5px;
+    }
+    .banner-button:hover {
+      background-color: rgb(35, 34, 31);
+    }
+
+      body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('black.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .container {
+            max-width: 800px;
+            margin: 120px auto;
+            padding: 50px;
+            background-color: rgba(146, 144, 144, 0.8);
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        h1 {
+            text-align: center;
+            color: #161313;
+        }
+        form {
+            text-align: center;
+            margin-top: 100px;
+        }
+        input[type="number"] {
+            width: 50px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #333;
+            border-radius: 6px;
+        }
+        select {
+            width: 100px; /* Increase the width */
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #333;
+            border-radius: 6px;
+        }
+        input[type="submit"] {
+            padding: 12px 24px;
+            background-color: #4e565e;
+            color: #099ac5;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: #333;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #priceContainer {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+  <div class="banner">
+    <a class="banner-button" href="bootstrap.html">Home</a>
+    <a class="banner-button" href="contact.html">Contact</a>
+  </div>
+    <div class="container">
+       <em><h1>Ticket Purchase</h1></em>
+        <form id="ticketForm" action="#">
+            <label for="numTickets">Number of Tickets:</label><br>
+            <input type="number" id="numTickets" name="numTickets" min="1" value="1" required><br><br> <!-- Add a line break -->
+            <label for="seatType">Seat Type:</label><br>
+            <select id="seatType" name="seatType" required>
+                <option value="standard">Standard</option>
+                <option value="premium">Premium</option>
+                <option value="vip">VIP</option>
+            </select><br>
+            <input type="submit" value="Buy Tickets">
+        </form>
+        <div id="priceContainer"></div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Payment Information</h2>
+            <p>Total Price: <span id="totalPrice"></span></p>
+            <label for="cardNumber">Card Number:</label><br>
+            <input type="text" id="cardNumber" name="cardNumber" required><br>
+            <label for="expiryDate">Expiry Date:</label><br>
+            <input type="text" id="expiryDate" name="expiryDate" required><br>
+            <label for="cvv">CVV:</label><br>
+            <input type="text" id="cvv" name="cvv" required><br>
+            <button id="confirmPayment">Confirm Payment</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var numTickets = parseInt(document.getElementById('numTickets').value);
+            var seatType = document.getElementById('seatType').value;
+            var totalPrice = calculatePrice(numTickets, seatType);
+            document.getElementById('priceContainer').innerText = "Total Price: $" + totalPrice.toFixed(2);
+            document.getElementById('totalPrice').innerText = "$" + totalPrice.toFixed(2);
+            document.getElementById('myModal').style.display = "block";
+        });
+
+        document.querySelector('.close').addEventListener('click', function() {
+            document.getElementById('myModal').style.display = "none";
+        });
+
+        function calculatePrice(numTickets, seatType) {
+            var price;
+            switch (seatType) {
+                case 'standard':
+                    price = 50;
+                    break;
+                case 'premium':
+                    price = 75;
+                    break;
+                case 'vip':
+                    price = 100;
+                    break;
+                default:
+                    price = 0;
+            }
+            return price * numTickets;
+        }
+    </script>
+</body>
+</html>
